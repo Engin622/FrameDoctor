@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <rect width="1200" height="300" rx="28" fill="#120d0e"/>
+  <style>.h{font:700 22px 'Segoe UI',sans-serif;fill:#fff}.p{font:15px 'Segoe UI',sans-serif;fill:#d6b8b8}.n{font:700 18px 'Segoe UI',sans-serif;fill:#ff5a52}.a{stroke:#ff4b43;stroke-width:4;fill:none}</style>
+  <path class="a" d="M275 150H330M570 150H625M865 150H920"/><path fill="#ff4b43" d="M330 150l-14-9v18zM625 150l-14-9v18zM920 150l-14-9v18z"/>
+  <g transform="translate(30 55)"><rect width="245" height="190" rx="20" fill="#261719" stroke="#71302d"/><text class="n" x="22" y="38">01 · ÖLÇ</text><text class="h" x="22" y="76">Sistemi tanı</text><text class="p" x="22" y="110">CPU, RAM, disk, GPU, ağ</text><text class="p" x="22" y="135">ve başlangıç yükünü tara.</text></g>
+  <g transform="translate(330 55)"><rect width="240" height="190" rx="20" fill="#261719" stroke="#71302d"/><text class="n" x="22" y="38">02 · SEÇ</text><text class="h" x="22" y="76">Profili belirle</text><text class="p" x="22" y="110">Normal, Orta, En İyi</text><text class="p" x="22" y="135">veya tamamen özel seçim.</text></g>
+  <g transform="translate(625 55)"><rect width="240" height="190" rx="20" fill="#261719" stroke="#71302d"/><text class="n" x="22" y="38">03 · ONAYLA</text><text class="h" x="22" y="76">Kontrol sende</text><text class="p" x="22" y="110">İşaretlenenleri incele,</text><text class="p" x="22" y="135">yalnızca onayladığını uygula.</text></g>
+  <g transform="translate(920 55)"><rect width="250" height="190" rx="20" fill="#261719" stroke="#71302d"/><text class="n" x="22" y="38">04 · İZLE</text><text class="h" x="22" y="76">Oyunda doğrula</text><text class="p" x="22" y="110">FPS, yük, sıcaklık ve ping</text><text class="p" x="22" y="135">ile sonucu canlı takip et.</text></g>
+</svg>
