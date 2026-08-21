@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Güvenlik açığı bildirimi
+    url: https://github.com/Engin622/FrameDoctor/security
+    about: Güvenlik sorunlarını herkese açık hata bildiriminde hassas ayrıntılarla paylaşma.
+  - name: FrameDoctor v5.0 sürümü
+    url: https://github.com/Engin622/FrameDoctor/releases/tag/v5.0
+    about: Güncel Setup, sürüm notları ve SHA-256 bilgisi.

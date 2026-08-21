@@ -1,0 +1,54 @@
+name: Özellik önerisi
+description: FrameDoctor için yeni bir özellik veya kullanım iyileştirmesi öner.
+title: "[Öneri]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Önerinin çözmek istediği gerçek sorunu anlat. Başka uygulamaların ücretli veya
+        kapalı özelliklerinin birebir kopyalanması talep edilmemelidir.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Çözülmesini istediğin sorun
+      placeholder: "Oyun oynarken ... yapmak zorunda kalıyorum çünkü ..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Önerdiğin çözüm
+      placeholder: "FrameDoctor ... yapabilirse ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: İlgili bölüm
+      options:
+        - Sistem ve performans
+        - Oyun Modu
+        - Overlay ve FPS analizi
+        - Ağ ve güvenlik
+        - Dosya izleme
+        - Temizlik ve onarım
+        - Kurulum ve güncelleme
+        - Arayüz ve erişilebilirlik
+        - Yeni bölüm
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Denediğin alternatifler
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Güvenlik kontrolü
+      options:
+        - label: Önerim Windows güvenliğini veya anti-cheat süreçlerini devre dışı bırakmayı gerektirmiyor.
+          required: true
+        - label: Önerimin tüm bilgisayarlarda aynı sonucu garanti etmeyebileceğini anlıyorum.
+          required: true

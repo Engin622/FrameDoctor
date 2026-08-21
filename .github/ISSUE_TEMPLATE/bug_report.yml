@@ -1,0 +1,89 @@
+name: Hata bildirimi
+description: FrameDoctor'da tekrarlanabilen bir hata veya beklenmeyen davranış bildir.
+title: "[Hata]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bildirim için teşekkürler. Kişisel bilgi, IP adresi veya özel dosya yolu paylaşma.
+        Mümkünse hatayı tekrar oluşturan en kısa adımları yaz.
+  - type: input
+    id: version
+    attributes:
+      label: FrameDoctor sürümü
+      description: Uygulamanın Hakkında bölümünde görünür.
+      placeholder: "Örn. 5.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows sürümü
+      options:
+        - Windows 11
+        - Windows 10
+        - Diğer / emin değilim
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Temel donanım
+      description: İşlemci, ekran kartı ve RAM miktarı.
+      placeholder: "Örn. Ryzen 5 5600, GTX 1650, 16 GB RAM"
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Sorunun yaşandığı bölüm
+      options:
+        - Sistem Durumu / Overlay
+        - Optimizasyonlar
+        - Başlangıç
+        - Windows Uygulamaları
+        - Oyun Modu
+        - FrameScale / Upscaling
+        - Ağ ve Ping
+        - Güvenlik
+        - Dosya İzleme
+        - Temizlik
+        - Onarım
+        - Kurulum / Güncelleme / Kaldırma
+        - Diğer
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Tekrar oluşturma adımları
+      placeholder: |
+        1. FrameDoctor'u açtım
+        2. ... bölümüne girdim
+        3. ... düğmesine bastım
+        4. Hata oluştu
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Beklenen ve gerçekleşen davranış
+      placeholder: "Beklediğim: ... / Gerçekte olan: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Hata mesajı veya ekran görüntüsü
+      description: Kullanıcı adı, IP ve özel dosya yollarını gizle.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Kontrol listesi
+      options:
+        - label: Aynı sorun için açık bir bildirim bulunmadığını kontrol ettim.
+          required: true
+        - label: Kişisel veya hassas bilgi paylaşmadım.
+          required: true
