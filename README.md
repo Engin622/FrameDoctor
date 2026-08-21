@@ -15,6 +15,8 @@
 
 [**⬇ FrameDoctor v5.0 Setup İndir**](https://github.com/Engin622/FrameDoctor/raw/main/FrameDoctor-Setup-v5.0.exe)
 
+[VirusTotal doğrulaması](https://www.virustotal.com/gui/file/2ea7d6afbc4ad09759fc7b1a21d36263c8c884794f8bbdf0425eca53df96f718?nocache=1) · [Gizlilik](PRIVACY.md) · [Kullanım Şartları](TERMS.md) · [Hata/öneri bildir](https://github.com/Engin622/FrameDoctor/issues/new/choose)
+
 <sub>Ücretsiz dağıtım · Reklamsız · Hesap gerektirmez · Kaynak kod bu depoda yayımlanmaz</sub>
 
 </div>
@@ -31,6 +33,7 @@
 - [Performans profilleri](#performans-profilleri)
 - [Oyun içi gösterge ve FPS ölçümü](#oyun-içi-gösterge-ve-fps-ölçümü)
 - [Güvenlik ve gizlilik](#güvenlik-ve-gizlilik)
+- [Geri yükleme ve geri alma](#geri-yükleme-ve-geri-alma)
 - [İndirme ve kurulum](#indirme-ve-kurulum)
 - [Dosya bütünlüğü](#dosya-bütünlüğü)
 - [Kısayollar](#kısayollar)
@@ -56,6 +59,8 @@ Amaç yalnızca ortalama FPS’yi yükseltmek değil; **FPS dalgalanmasını, ge
 <p align="center"><img src="assets/workflow.svg" width="100%" alt="FrameDoctor çalışma akışı"></p>
 
 FrameDoctor, bir profil seçildiğinde ayarları gizlice uygulamaz. Profil önce ilgili seçenekleri işaretler. Kullanıcı listeyi kontrol eder, istemediği maddeleri kaldırabilir ve yalnızca **Uygula** düğmesine bastığında işlem yapılır.
+
+Kapsamlı bir değişiklik uygulanmadan önce FrameDoctor otomatik olarak Windows geri yükleme noktası oluşturmayı dener. İşlem sonucu kullanıcıya gösterilir; geri yükleme noktası oluşturulamazsa bunun başarıyla oluştuğu varsayılmaz.
 
 ## Uygulama ekranı
 
@@ -253,9 +258,13 @@ Overlay görünmiyorsa oyunu **Kenarlıksız Pencere / Borderless** modunda dene
 
 ## Güvenlik ve gizlilik
 
+> **Kontrol sende:** Profiller yalnızca seçenekleri önceden işaretler. Değişiklikler kullanıcı onayından sonra uygulanır; kapsamlı işlemlerden önce otomatik geri yükleme noktası denenir ve FrameDoctor ayarları toplu olarak geri alınabilir.
+
 ### FrameDoctor ne gönderir?
 
 FrameDoctor’un kendi reklam, kullanıcı hesabı veya ürün telemetrisi bulunmaz. Sistem raporu ve oyun oturumu kayıtları yerel bilgisayarda tutulur. VirusTotal seçeneği kullanılırsa yalnızca kullanıcı tarafından seçilen arama sayfası web tarayıcısında açılır; FrameDoctor dosyayı otomatik yüklemez.
+
+Ayrıntılar için [Gizlilik Politikası](PRIVACY.md), kullanım koşulları için [Kullanım Şartları](TERMS.md), hassas güvenlik bildirimleri için [Güvenlik Politikası](SECURITY.md) okunabilir.
 
 ### Ağ trafiğinin içeriğini okuyabilir mi?
 
@@ -276,6 +285,16 @@ Bağlantının hangi işlemden hangi IP/porta gittiğini gösterebilir. HTTPS/TL
 ### Dürüst sınır
 
 Hiçbir masaüstü programı “kırılamaz” değildir. Native C++ kullanılması dnSpy gibi .NET odaklı araçlarla kaynak koda dönüştürmeyi engeller; ancak deneyimli kişiler Ghidra/IDA gibi araçlarla makine kodunu inceleyebilir. Bu nedenle FrameDoctor EXE içine parola, API anahtarı veya özel sertifika anahtarı gömmez.
+
+## Geri yükleme ve geri alma
+
+FrameDoctor güvenliği üç aşamada ele alır:
+
+1. **Ön izleme:** Performans profili işlemleri doğrudan uygulamaz; yapılacak seçimleri kullanıcıya gösterir.
+2. **Koruma:** Kapsamlı sistem değişikliklerinden önce otomatik Windows geri yükleme noktası oluşturmayı dener ve sonucu bildirir.
+3. **Geri alma:** Onarım bölümündeki **Tüm Optimizasyonları Geri Al** aracı, FrameDoctor tarafından yönetilen ayarları normal değerlere döndürür.
+
+Geri alma her tür işlemi aynı biçimde tersine çeviremez. Özellikle kaldırılmış Microsoft Store uygulamaları yeniden kurulmalıdır; silinen kullanıcı dosyaları geri oluşturulamaz. Bu nedenle uygulama, kullanımda olan dosyaları zorla silmez ve kritik işlemlerde kullanıcı onayı ister.
 
 ## İndirme ve kurulum
 
@@ -311,6 +330,16 @@ Güncel kurulum paketinin SHA-256 değeri:
 ```text
 CFAECCD445AA5FBCE5A04C2022BCAC2BE15BC60A99A5DE60D1B45085F3D5FA03  FrameDoctor-Setup-v5.0.exe
 ```
+
+Kurulumun içindeki uygulama dosyasının SHA-256 değeri ve bağımsız tarama sonucu:
+
+```text
+2EA7D6AFBC4AD09759FC7B1A21D36263C8C884794F8BBDF0425ECA53DF96F718  FrameDoctor.exe
+```
+
+[FrameDoctor.exe v5.0 VirusTotal sonucunu görüntüle](https://www.virustotal.com/gui/file/2ea7d6afbc4ad09759fc7b1a21d36263c8c884794f8bbdf0425eca53df96f718?nocache=1)
+
+> VirusTotal bağlantısı **FrameDoctor.exe** uygulama dosyasına aittir; Setup dosyasının hash'i yukarıda ayrıca verilmiştir. Tarama sonucu tek başına mutlak güvenlik garantisi değildir. Dosya hash'i burada yazan değerle eşleşmiyorsa çalıştırmayın.
 
 PowerShell ile doğrulama:
 
@@ -407,6 +436,8 @@ Optimizasyon seçeneklerinin geri alma işlemleri bulunur ve Onarım bölümünd
 
 Bu depo FrameDoctor’un resmî dağıtım kanalıdır. Sorun bildirirken aşağıdaki bilgileri eklemek teşhisi hızlandırır:
 
+[**Hata bildir veya özellik öner**](https://github.com/Engin622/FrameDoctor/issues/new/choose) — yönlendirmeli formlar gerekli bilgileri adım adım ister.
+
 - Windows sürümü
 - İşlemci, ekran kartı ve RAM
 - Sorunun gerçekleştiği FrameDoctor bölümü
@@ -427,5 +458,7 @@ Geliştirici: **Engin** · Sürüm **5.0** · 2026
 Copyright © 2026 Engin. Tüm hakları saklıdır.
 
 Bu depo uygulamanın dağıtım kanalıdır; kaynak kod deposu değildir.
+
+[Gizlilik Politikası](PRIVACY.md) · [Kullanım Şartları](TERMS.md) · [Güvenlik Politikası](SECURITY.md) · [Destek](https://github.com/Engin622/FrameDoctor/issues/new/choose)
 
 </div>
