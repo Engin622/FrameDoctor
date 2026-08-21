@@ -27,6 +27,7 @@
 - [Nasıl çalışır?](#nasıl-çalışır)
 - [Uygulama ekranı](#uygulama-ekranı)
 - [Bütün özellikler](#bütün-özellikler)
+- [Gerçek CS2 benchmark sonuçları](#gerçek-cs2-benchmark-sonuçları)
 - [Performans profilleri](#performans-profilleri)
 - [Oyun içi gösterge ve FPS ölçümü](#oyun-içi-gösterge-ve-fps-ölçümü)
 - [Güvenlik ve gizlilik](#güvenlik-ve-gizlilik)
@@ -195,6 +196,34 @@ SFC ve DISM işlemleri uzun sürebilir; işlem devam ederken bilgisayar kapatıl
 - FPS düşüşlerinde CPU, GPU veya RAM darboğazı tahmini
 - İşlemci, ekran kartı, RAM, anakart, Windows sürümü ve disk bilgileri
 - Destek alırken paylaşılabilecek yerel sistem raporu
+
+## Gerçek CS2 benchmark sonuçları
+
+<p align="center"><img src="assets/benchmark-cs2.svg" width="100%" alt="FrameDoctor CS2 VProf benchmark sonuçları"></p>
+
+Aşağıdaki değerler aynı FrameDoctor geliştirme bilgisayarında CS2’nin kendi `VProfLite`
+performans raporundan alınan yaklaşık iki dakikalık altı ayrı gerçek testtir. `Avg`, ortalama
+FPS’yi; `P1` ise en yavaş yüzde birlik dilimin performansını temsil eder. P1 değeri yükseldikçe
+ani FPS düşüşlerinin ve takılmaların azalması beklenir.
+
+| Test | Kare | Süre aralığı | Ortalama FPS | P1 FPS | Ortalama kare süresi |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 22.368 | 121 saniye | 184,9 | 92,2 | 5,41 ms |
+| 2 | 23.306 | 115 saniye | 210,0 | 110,6 | 4,76 ms |
+| 3 | 29.797 | 121 saniye | 247,5 | 111,8 | 4,04 ms |
+| 4 | 30.651 | 122 saniye | 251,9 | 119,2 | 3,97 ms |
+| 5 | 30.155 | 121 saniye | 250,0 | 113,1 | 4,00 ms |
+| 6 | 33.714 | 127 saniye | **266,8** | **120,8** | **3,75 ms** |
+
+En eski ölçüm ile en yüksek sonuç karşılaştırıldığında ortalama FPS’de yaklaşık **%44,3**,
+P1 değerinde yaklaşık **%31,0** artış görülmüştür. Ortalama kare süresi 5,41 ms’den
+3,75 ms’ye düşmüştür.
+
+> **Dürüst test notu:** Bunlar aynı bilgisayardan alınmış gerçek motor raporlarıdır fakat tüm
+> testlerin harita, sahne, oyuncu sayısı, sürücü sıcaklığı ve grafik yükünün laboratuvar
+> koşullarında tamamen sabitlendiği iddia edilmez. Sonuçlar FrameDoctor’un geliştirme sürecindeki
+> sistem iyileşmesini gösterir; her bilgisayarda aynı yüzdeyi garanti etmez. Tekrarlanabilir bir
+> karşılaştırma için aynı harita, çözünürlük, grafik ayarı ve test rotası kullanılmalıdır.
 
 ## Performans profilleri
 

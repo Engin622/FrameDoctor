@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <rect width="1200" height="560" rx="28" fill="#120d0e"/>
+  <style>.title{font:700 30px 'Segoe UI',sans-serif;fill:#fff}.sub{font:16px 'Segoe UI',sans-serif;fill:#c9aaaa}.lab{font:14px 'Segoe UI',sans-serif;fill:#d7bcbc}.val{font:700 15px 'Segoe UI',sans-serif;fill:#fff}.axis{stroke:#593436;stroke-width:1}.avg{fill:#ef4942}.p1{fill:#ff9b63}</style>
+  <text class="title" x="48" y="55">CS2 VProf · Gerçek Sistem Ölçümleri</text>
+  <text class="sub" x="48" y="86">6 ayrı yaklaşık 2 dakikalık test · yüksek değer daha iyi</text>
+  <line class="axis" x1="90" y1="450" x2="1145" y2="450"/>
+  <g><rect class="avg" x="120" y="188" width="48" height="262"/><rect class="p1" x="172" y="319" width="48" height="131"/><text class="val" x="120" y="178">184.9</text><text class="val" x="172" y="309">92.2</text><text class="lab" x="130" y="480">Test 1</text></g>
+  <g><rect class="avg" x="295" y="152" width="48" height="298"/><rect class="p1" x="347" y="293" width="48" height="157"/><text class="val" x="295" y="142">210.0</text><text class="val" x="347" y="283">110.6</text><text class="lab" x="305" y="480">Test 2</text></g>
+  <g><rect class="avg" x="470" y="98" width="48" height="352"/><rect class="p1" x="522" y="291" width="48" height="159"/><text class="val" x="470" y="88">247.5</text><text class="val" x="522" y="281">111.8</text><text class="lab" x="480" y="480">Test 3</text></g>
+  <g><rect class="avg" x="645" y="92" width="48" height="358"/><rect class="p1" x="697" y="281" width="48" height="169"/><text class="val" x="645" y="82">251.9</text><text class="val" x="697" y="271">119.2</text><text class="lab" x="655" y="480">Test 4</text></g>
+  <g><rect class="avg" x="820" y="95" width="48" height="355"/><rect class="p1" x="872" y="289" width="48" height="161"/><text class="val" x="820" y="85">250.0</text><text class="val" x="872" y="279">113.1</text><text class="lab" x="830" y="480">Test 5</text></g>
+  <g><rect class="avg" x="995" y="71" width="48" height="379"/><rect class="p1" x="1047" y="278" width="48" height="172"/><text class="val" x="995" y="61">266.8</text><text class="val" x="1047" y="268">120.8</text><text class="lab" x="1005" y="480">Test 6</text></g>
+  <rect class="avg" x="390" y="518" width="20" height="20" rx="4"/><text class="lab" x="420" y="534">Ortalama FPS</text>
+  <rect class="p1" x="570" y="518" width="20" height="20" rx="4"/><text class="lab" x="600" y="534">P1 / düşük FPS</text>
+  <text class="lab" x="805" y="534">En eski → en iyi: Avg +%44,3 · P1 +%31,0</text>
+</svg>
